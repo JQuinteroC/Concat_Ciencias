@@ -15,7 +15,6 @@ def comparacion(data):
         i = i + 1
     return data
 
-print('PELICULAS DE BLOKBASTER')
 pelisBlokbaster = pd.DataFrame({'nombre':['Jokar', 'Harry Popoter',
                                           'Rapidos y Jugosos', 'Los Revengadores'],
                                 'existencia':[10, 23, 18, 25],
@@ -23,7 +22,6 @@ pelisBlokbaster = pd.DataFrame({'nombre':['Jokar', 'Harry Popoter',
                                 'distribuidor':['DC comacs', 'Los Wrogser',
                                                 '19 century' , 'Terrarial Studio']})
 
-print('PELICULAS DE NETFLOX')
 pelisNetflox = pd.DataFrame({'nombre' : ['Tranformistas', 'Jokar', 'Dino Park',
                                        'Piratas del Atlantico', 'Los Revengadores'],
                             'Val_Taquilla' : [5.4, 12.3, 9.3, 3.1, 6.5],
@@ -31,7 +29,9 @@ pelisNetflox = pd.DataFrame({'nombre' : ['Tranformistas', 'Jokar', 'Dino Park',
                             'existencia': [5, 19, 7, 11, 13]})
 
 # La empresa Netflox compro a Blokbaster, y desea saber su nuevo inventario
+print('PELICULAS DE BLOKBASTER')
 print(pelisBlokbaster)
+print('PELICULAS DE NETFLOX')
 print(pelisNetflox)
 
 pelisUnion = pd.concat([pelisNetflox, pelisBlokbaster], axis = 0, join='outer',
